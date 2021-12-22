@@ -1,0 +1,17 @@
+
+1.
+a) ./compiley.sh program.cpp hello
+b) It calls the function compile_file and passes all the arguments to it. The function assigns argument $1 to $input, argument $2 to $output, then runs g++ -o with $output (second argument) and $input(first argument) in this order. 
+
+2.
+a) No
+b) It’s splitting my program.cpp into two files. So “hello” becomes $3. As a result, it cannot find files “my” and “program.cpp”, because they do not exist
+
+3.
+a) No
+b) When passed to the function compile_file, the first parameter becomes $@ and the second is empty. So, the variables (arguments) aren’t being evaluated. It’s passing exactly what’s between the single quotes.
+
+4.
+a) Yes
+b) Because the variables contents (arguments) are being evaluated (including space issues resolution), then passed to the function properly.
+
